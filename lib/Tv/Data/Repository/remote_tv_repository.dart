@@ -46,11 +46,11 @@ class RemoteTvRepository extends BaseTvRepository {
   }
 
   @override
-  Future<Either<Failur, List<TvDetaliesRecomandation>>>
-      getTVDetaliesRecomandattion(GetTvRecomandationParametares idtvRec) async {
-    final reslut =
-        await baseRemoteTvDataSource.getTvDetaliesRecomandation(idtvRec);
-    // print(" +++++++ reslut getTVDetaliesRecomandattion ${reslut} ++++++++ ");
+  Future<Either<Failur, TvDetalies>> getTvDetalies(
+      GetTvDetaliesParametares idtv) async {
+    final reslut = await baseRemoteTvDataSource.getTvDetalies(idtv);
+    // print("======= reslut getMovieDetalies ${reslut} ========");
+
     try {
       return right(reslut);
     } on ServerExpation catch (Failur) {
@@ -59,11 +59,11 @@ class RemoteTvRepository extends BaseTvRepository {
   }
 
   @override
-  Future<Either<Failur, TvDetalies>> getTvDetalies(
-      GetTvDetaliesParametares idtv) async {
-    final reslut = await baseRemoteTvDataSource.getTvDetalies(idtv);
-    // print("======= reslut getMovieDetalies ${reslut} ========");
-
+  Future<Either<Failur, List<TvDetaliesRecomandation>>>
+      getTVDetaliesRecomandattion(GetTvRecomandationParametares idtvRec) async {
+    final reslut =
+        await baseRemoteTvDataSource.getTvDetaliesRecomandation(idtvRec);
+    // print(" +++++++ reslut getTVDetaliesRecomandattion ${reslut} ++++++++ ");
     try {
       return right(reslut);
     } on ServerExpation catch (Failur) {

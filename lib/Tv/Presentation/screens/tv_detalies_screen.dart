@@ -101,23 +101,23 @@ class TvDetailContent extends StatelessWidget {
                           const SizedBox(height: 8.0),
                           Row(
                             children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  vertical: 2.0,
-                                  horizontal: 8.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[800],
-                                  borderRadius: BorderRadius.circular(4.0),
-                                ),
-                                child: Text(
-                                  state.tvDetalies!.airData.split('-')[0],
-                                  style: const TextStyle(
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
+                              // Container(
+                              //   padding: const EdgeInsets.symmetric(
+                              //     vertical: 2.0,
+                              //     horizontal: 8.0,
+                              //   ),
+                              //   decoration: BoxDecoration(
+                              //     color: Colors.grey[800],
+                              //     borderRadius: BorderRadius.circular(4.0),
+                              //   ),
+                              //   child: Text(
+                              // state.tvDetalies!.next_episode_to_air.airData.split('-')[0],
+                              //     style: const TextStyle(
+                              //       fontSize: 16.0,
+                              //       fontWeight: FontWeight.w500,
+                              //     ),
+                              //   ),
+                              // ),
                               const SizedBox(width: 16.0),
                               Row(
                                 children: [

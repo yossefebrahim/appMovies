@@ -68,7 +68,7 @@ class RemoteTvDataSource extends BaseRemoteTvDataSource {
   @override
   Future<TvDetaliesModel> getTvDetalies(GetTvDetaliesParametares idtv) async {
     final response = await Dio().get(ApiConstanceTv.tvDetailesUrlBase(idtv.id));
-    log("response getTvDetalies  ${response}");
+    // log("response getTvDetalies  ${response}");
     if (response.statusCode == 200) {
       return TvDetaliesModel.fromJson(response.data);
     } else {
@@ -82,7 +82,7 @@ class RemoteTvDataSource extends BaseRemoteTvDataSource {
       GetTvRecomandationParametares idtvRec) async {
     final response =
         await Dio().get(ApiConstanceTv.tvrecomandationUrlBase(idtvRec.id));
-    print("response getTvDetaliesRecomandation  ${response}");
+    // log("response getTvDetaliesRecomandation  ${response}");
 
     if (response.statusCode == 200) {
       return List<RecomandationTvModel>.from(

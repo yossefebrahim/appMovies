@@ -8,7 +8,7 @@ class TvDetaliesModel extends TvDetalies {
     required super.name,
     required super.overview,
     required super.voteAverage,
-    required super.airData,
+    // required super.airData,
     required super.genrestv,
   });
 
@@ -19,7 +19,7 @@ class TvDetaliesModel extends TvDetalies {
         name: json["name"],
         overview: json["overview"],
         voteAverage: json["vote_average"],
-        airData: json["air_date"],
+        // airData: json["air_date"],
         genrestv: List<GenresTvModel>.from(
             json["genres"].map((x) => GenresTvModel.fromJson(x))),
       );

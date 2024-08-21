@@ -8,7 +8,7 @@ class TvDetalies extends Equatable {
   final String overview;
   final String name;
   final double voteAverage;
-  final String airData;
+  // final String airData;
 
   const TvDetalies({
     required this.backdropPath,
@@ -17,7 +17,7 @@ class TvDetalies extends Equatable {
     required this.overview,
     required this.name,
     required this.voteAverage,
-    required this.airData,
+    // required this.airData,
   });
 
   @override
@@ -27,7 +27,7 @@ class TvDetalies extends Equatable {
         name,
         overview,
         voteAverage,
-        airData,
+        // airData,
         genrestv,
       ];
 }
